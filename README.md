@@ -51,3 +51,8 @@ Use venv
 ## Adding and removing info
 *not yet implemented*
 
+---
+
+### References
+I am following the video from FreeCodeCamp.com (*https://www.youtube.com/watch?v=0oSsLbh_Kv4*) 19:00  
+Resume template from I Did Coding (*https://github.com/bobby-didcoding/didcoding_resume_template*)
