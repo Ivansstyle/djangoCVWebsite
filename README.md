@@ -43,6 +43,7 @@ keep this section updated.
 
 ## Local deployment
 *not yet discovered*
+Use venv
 
 ## Server deployment 
 *not yet discovered*
