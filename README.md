@@ -23,6 +23,7 @@ that made your CV website all over again. And I have not yet found any platform 
 - Learn Django framework and put it to use to achieve a decent-looking web CV
 - Create a website that spits out a printable pdf version at a push of a button
 - Have a platform to note projects and achievements and to keep track of these
+- Create PDF CV from website data
 - Make the website public
 - Create tools to easily update information and highlight relevant information on the website
 - Get a job
@@ -32,18 +33,29 @@ that made your CV website all over again. And I have not yet found any platform 
 - Very cool modern design
 - Mobile adaptation 
 - Access via QR
+- QR Visit card
 - Allow for subsection selection to target different job profiles
 - Add a generic blog and notification board for latest projects / achievements 
 - Create a knowledge-sharing page to post tutorials and other useful articles for myself and others
-- Integrate WebGL / WebVR / iOS ARKit for interactive browsing
+- Integrate WebGL + WebXR (*https://www.w3.org/TR/webxr/*) / 
+iOS ARKit (*https://developer.apple.com/augmented-reality/arkit/*) for interactive browsing and virtual office
 
 # Usage
 While the project is in development, there would be not much to see here. I will try to do my best to 
 keep this section updated.
 
 ## Local deployment
+1. Clone the git repository  
+    `git clone https://github.com/Ivansstyle/djangoCVWebsite.git && cd djangoCVWebsite`
+2. Create virtual environment  
+   `python3 -m venv ./venv/`
+3. Activate virtual environment  
+`source ./venv/bin/activate`
+
+4. Install django and pillow  
+`pip install -r requirements.txt` or `pip install django Pillow django-ckeditor`
+
 *not yet discovered*
-Use venv
 
 ## Server deployment 
 *not yet discovered*
