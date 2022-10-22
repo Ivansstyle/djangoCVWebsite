@@ -20,9 +20,9 @@ that made your CV website all over again. And I have not yet found any platform 
 - Have to start from the beginning with every CV iteration
 
 ### Goals:
-- Learn Django framework and put it to use to achieve a decent-looking web CV
-- Create a website that spits out a printable pdf version at a push of a button
-- Have a platform to note projects and achievements and to keep track of these
+- Learn Django framework and put it to use to achieve a decent-looking web CV +
+- Create a website that spits out a printable pdf version at a push of a button +
+- Have a platform to note projects and achievements and to keep track of these +
 - Create PDF CV from website data
 - Make the website public
 - Create tools to easily update information and highlight relevant information on the website
@@ -32,13 +32,14 @@ that made your CV website all over again. And I have not yet found any platform 
 - Make the website interactive
 - Very cool modern design
 - Mobile adaptation 
-- Access via QR
-- QR Visit card
+- Access via QR (put it on the CV)
+- QR Visit card! 
 - Allow for subsection selection to target different job profiles
 - Add a generic blog and notification board for latest projects / achievements 
 - Create a knowledge-sharing page to post tutorials and other useful articles for myself and others
-- Integrate WebGL + WebXR (*https://www.w3.org/TR/webxr/*) / 
+- Integrate WebGL + WebXR (*https://www.w3.org/TR/webxr/*) /  (**I have started!**)
 iOS ARKit (*https://developer.apple.com/augmented-reality/arkit/*) for interactive browsing and virtual office
+- Design a virtual office
 
 # Usage
 While the project is in development, there would be not much to see here. I will try to do my best to 
@@ -55,13 +56,14 @@ keep this section updated.
 4. Install django and pillow  
 `pip install -r requirements.txt` or `pip install django Pillow django-ckeditor`
 
+
 *not yet discovered*
 
 ## Server deployment 
 *not yet discovered*
 
 ## Adding and removing info
-*not yet implemented*
+ use \<hostname:port\>/admin to access admin panel and set things up. 
 
 ---
 

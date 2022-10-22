@@ -50,7 +50,7 @@ class PortfolioView(generic.ListView):
 
 class PortfolioDetailView(generic.DetailView):
     model = Portfolio
-    template_name = "main/portfolio-detail.gtml"
+    template_name = "main/portfolio-detail.html"
 
 class BlogView(generic.ListView):
     model = Blog
