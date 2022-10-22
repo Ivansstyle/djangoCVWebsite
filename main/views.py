@@ -26,6 +26,9 @@ class IndexView(generic.TemplateView):
         context['portfolio'] = portfolio
         return context
 
+class VRView(generic.TemplateView):
+    template_name = "main/vr.html"
+
 class ContactView(generic.FormView):
     template_name = "main/contact.html"
     form_class = ContactForm
