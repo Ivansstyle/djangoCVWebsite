@@ -2,7 +2,6 @@ from django.conf import settings
 from jinja2.ext import Extension
 from jinja2 import nodes
 
-
 def format_path_for_latex(path):
     path = path.replace("\\", "/")
     if not path.endswith("/"):
