@@ -1,0 +1,236 @@
+%\documentclass[a4paper]{MagicalCV}
+
+\documentclass[a4paper]{MagicalCV}
+
+% Removing page numbers
+\usepackage{fancyhdr}
+\usepackage{qrcode}
+\pagestyle{fancy}
+\fancyhf{}
+
+% Change the geometry
+\geometry{left=1.4cm, top=.6cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Defining your colors
+\definecolor{DarkGrey}{HTML}{FFFFFF}
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{headings}{VividPurple}
+\colorlet{accent}{DarkGrey}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% start document
+\begin{document}
+
+% Last update time
+\lastupdated
+
+% Title name
+\namesection{Ivans}{Saponenko}{\phone{+37125110430} \email{\href{mailto:ivans.saponenko@gmail.com}{ivans.saponenko@gmail.com}}}
+
+% Column one
+\begin{minipage}[t]{0.49\textwidth}
+ % Personal Statement
+ \cvsection{Personal Statement}
+
+ Self disciplined,
+ open, friendly and culturally diverse trilingual (Russian, English, Latvian)
+ person committed to exploring tho world of technology and adopting software techniques to solve real world problems.
+ Always looking for opportunity to create, share and learn.
+ I am enthusiastic, passionate, and dedicated to the work I do.
+
+
+% Links
+\cvsection{Links}
+\begin{tabbing}
+ \linkedin{Linkedin} \= \href{https://www.linkedin.com/in/ivanssaponenko/}{\bf Ivans Saponenko} \\
+ \github{GitHub} \> \href{https://github.com/ivansstyle}{\bf ivansstyle} \\
+ \vimeo{Vimeo} \> \href{https://www.vimeo.com/ivansstyle}{\bf ivansstyle} \\
+ \vimeo{Website} \> \href{https://www.ivansstyle.com}{\bf www.ivansstyle.com}
+\end{tabbing}
+
+% Skills
+ \vspace{0.1cm}
+ \sectionsep
+\cvsection{Skills}
+
+ \subsection{Languages}
+\textbullet{ English: fluent } \textbullet{ Russian: native } \textbullet{ Latvian: conversational }\textbullet{ French: beginner }
+
+\subsection{Programming}
+Python \textbullet{}  C/C++ \textbullet{} HTML/CSS  \textbullet{}
+GLSL \textbullet{} SQL \textbullet{} Shell Scripting
+ \subsection{Frameworks}
+ Qt \textbullet{} Django \textbullet{} OpenGL
+ \sectionsep
+ \subsection{Operating Systems}
+ Windows \textbullet{} Linux \textbullet{} MacOS
+ \sectionsep
+ \subsection{Software}
+ Adobe CC (Photoshop, Premiere, After Effects, Audition) \textbullet{} Autodesk Maya \textbullet{} Houdini \textbullet{} Unity \textbullet{} Unreal
+ \sectionsep
+ \subsection{Miscellaneous}
+Shell Scripting \textbullet{} \LaTeX  (this cv)  \textbullet{} Animation Pipelines \textbullet{} Git \textbullet{} Agile (Scrum, Kanban) \textbullet{} Jira \textbullet{} Docker
+\sectionsep
+
+% Education
+\cvsection{Education}
+\subsection{Bournemouth University}
+\descript{BSc Software Development for Animation, Games and Effects}
+\cvevent{Sep 15 - Sep 21}{Bournemouth, UK}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+Modules:
+\begin{tightemize}
+\item Computer Science
+\item Advanced Programming
+\item Animation Production Tools
+\end{tightemize}
+ Coursework:
+\begin{tightemize}
+\item Advanced Programming
+\item Animation Production Tools
+\end{tightemize}
+
+ Unfinished: Certificate level 5 achieved.
+\sectionsep
+
+\subsection{Les Roches School of Hospitality}
+\descript{BA Hotel Management}
+\cvevent{Sep 2019}{Crans, Switzerland}
+\sectionsep
+
+
+\subsection{Riga Purvciems Secondary School}
+\descript{Specialisation in English and Math}
+\cvevent{Jun 2015}{Riga, LV}
+\begin{tightemize}
+ \item School Council
+ \item Exchange Programs
+\end{tightemize}
+\sectionsep
+
+%
+%% Honors
+%\cvsection{Honors}
+%
+%\subsection{Excellence Scholarship}
+%\descript{University of leeds}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%Awarded to international students who have achieved the equivalent of a UK first class bachelors' degree.
+%\sectionsep
+%
+%\subsection{Industrial Visit}
+%\descript{Infosys Pune}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%I was as one of the students for industrial training, where 28 students were chosen out of 2000.
+%\sectionsep
+
+% Column two
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+
+% Coursework
+\cvsection{Coursework}
+
+\subsection{R\&D}
+Software Development R\&D \\
+Developing a rendering technique \\
+Research in application of Signed Distance Fields \\
+Developing a method to use SDL for transparent object rendering \\
+Learning trough research \\
+SIGGRAPH Style report and poster \\
+Graphics Rendering \\
+ Valuable Experience \\
+\textbf{Research Paper: }
+Using Signed Distance Fields to render geometry in an interactive editor
+\sectionsep
+
+
+% Experience
+\cvsection{Experience}
+
+\runsubsection{Freelancer} \\
+\descript{Upwork}
+\cvevent{Apr 2022 – Present}{Riga, Latvia}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developing PyQt and PySide applications for various clients
+\item Delivering executables for MacOS, Windows and Linux
+\item Designing interfaces based on user specifications or designs
+\end{tightemize}
+\sectionsep
+
+\runsubsection{R\&D in Animation Pipeline Development} \\
+\descript{Supamonks Animation Studio}
+\cvevent{Jun 2017 – Aug 2017}{Paris, France}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Working with R\&D team of Supamonks Studio
+ \item Creating UI and logic for in-house Pipeline software
+ \item Contributing to an open-source project \href{https://www.kabaretstudio.com/credits}{Kabaret Studio}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Project Develpoment for Wine Business} \\
+\descript{FMS Wine Marketing}
+\cvevent{Jun 2019 – Sep 2019}{Cape Town, SA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+ \item Internship in South Africa
+\item Design and marketing for private label wines
+\end{tightemize}
+\sectionsep
+% HOTEL MANAGEMENT
+%\runsubsection{Hotel Management Internship} \\
+%\descript{Radisson Collection Moscow}
+%\cvevent{Jun 2019 – Jul 2019}{Moscow, RU}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\begin{tightemize}
+%\item Internship as a part of Event Management Team
+%\end{tightemize}
+%\sectionsep
+%
+%% Competitions
+%\cvsection{Competitions}
+%
+%\runsubsection{Complex level} \\
+%\descript{Smart India Hackathon }
+%\cvevent{Jan 2019 – Feb 2019}{Bhubaneshwar, Orissa}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\begin{tightemize}
+%\item We had a team of 6 people under the alias 'Cicada3301' everyone had different skill sets we made a website which was connected to a blockchain network on Ethereum which was set up on the network of our personal computers.
+%\item  After passing all the three rounds, our team was declared the winner of our question set. We won a lump sum of 1lakh₹(s).
+%\end{tightemize}
+%\sectionsep
+
+% Recent Projects
+\cvsection{Recent Projects}
+
+\runsubsection{Avant Pixis Audience Finder} \\
+\descript{Upwork - Avant Software}
+\cvevent{Oct 2022}{Upwork}
+Developing an desktop MacOS app to run ML algorithms that search database for mails with similarity to input ones. Using
+PySide to create a 1 to 1 interface designed in Figma
+\sectionsep
+
+\runsubsection{PancakeSwap WEB3 Crypto Multitool} \\
+\descript{Upwork - PancakeSwap Team}
+\cvevent{Apr 2022 – Sep 2022}{Upwork}
+Developing a web3 application based on CLI Python scripts to exchange and send cryptocurrency.
+
+\end{minipage}
+\end{document}

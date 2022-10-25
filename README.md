@@ -68,5 +68,6 @@ keep this section updated.
 ---
 
 ### References
-I am following the video from FreeCodeCamp.com (*https://www.youtube.com/watch?v=0oSsLbh_Kv4*) 19:00  
+I am following the video from FreeCodeCamp.com (*https://www.youtube.com/watch?v=0oSsLbh_Kv4*) 
 Resume template from I Did Coding (*https://github.com/bobby-didcoding/didcoding_resume_template*)
+.tex file compilation and rendering app module (*https://github.com/weinbusch/django-tex*)

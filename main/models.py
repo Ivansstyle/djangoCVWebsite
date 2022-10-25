@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from ckeditor.fields import RichTextField
+from django_tex.core import compile_template_to_pdf
+import os
+
 # Create your models here.
 
 class Skill(models.Model):
@@ -28,7 +31,13 @@ class UserProfile(models.Model):
     bio = models.TextField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, blank=True)
     cv = models.FileField(blank=True, null=True, upload_to="cv")
+    template_name = ''
 
+    context = {'object':object}
+
+    print('compiling CV')
+    #cv = compile_template_to_pdf(template_name='main/tex/resume.tex', context=context)
+    print('finished')
     def __str__(self):
         return f'{self.user.first_name, self.user.last_name}'
 
