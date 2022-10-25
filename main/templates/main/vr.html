@@ -200,7 +200,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </div>
     </section>
     <main style="text-align: center;">
-      <p>Click 'Enter XR' to see content</p>
+      <p>Click 'Enter VR' to see content</p>
     </main>
     <script type="module">
       import {WebXRButton} from '{% static 'js/util/webxr-button.js' %}';
@@ -225,6 +225,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let gl = null;
       let renderer = null;
       let scene = new Scene();
+
       //scene.addNode(new Gltf2Node({url: 'media/gltf/space/space.gltf'}));
       scene.addNode(new Gltf2Node({url: '{% static 'media/space_vr/space.gltf'%}'}));
       //scene.addNode(new SkyboxNode({url: 'media/textures/milky-way-4k.png'}));
@@ -251,20 +252,20 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
       }
 
-      // Called when the user selects a device to present to. In response we
+      // Called when the user selects a device to present to. In response, we
       // will request an exclusive session from that device.
       function onRequestSession() {
         return navigator.xr.requestSession('immersive-vr').then(onSessionStarted);
       }
 
-      // Called when we've successfully acquired a XRSession. In response we
+      // Called when we've successfully acquired a XRSession. In response, we
       // will set up the necessary session state and kick off the frame loop.
       function onSessionStarted(session) {
         // This informs the 'Enter XR' button that the session has started and
         // that it should display 'Exit XR' instead.
         xrButton.setSession(session);
 
-        // Listen for the sessions 'end' event so we can respond if the user
+        // Listen for the sessions 'end' event, so we can respond if the user
         // or UA ends the session for any reason.
         session.addEventListener('end', onSessionEnded);
 
@@ -297,7 +298,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         });
       }
 
-      // Called when the user clicks the 'Exit XR' button. In response we end
+      // Called when the user clicks the 'Exit XR' button. In response, we end
       // the session.
       function onEndSession(session) {
         session.end();
