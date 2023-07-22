@@ -2,18 +2,18 @@
 /* font-family: 'Courier Prime', monospace;
 font-family: 'Heebo', sans-serif; */
 :root {
-  --primaryColor: #9C07B6;
-  --primaryDarkColor: #3D0048;
-  --primaryHoverColor: #900AA8;
-  --secondaryColor: #F9B000;
-  --baseColor: #21243D;
+  --primaryColor: #38647a;
+  --primaryDarkColor: #183844;
+  --primaryHoverColor: #299dcb;
+  --secondaryColor: #4b9361;
+  --baseColor: #2b3344;
   --baseFont: 'Heebo', sans-serif;
-  --titleFont: 'Courier Prime', monospace;
+  --titleFont: 'Courier New', monospace;
   --regular: 400;
   --medium: 500;
   --bold: 700;
   --black: 900;
-  --lightBg: #F1F1F1;
+  --lightBg: #fceed1;
 }
 html {
   scroll-behavior: smooth;
@@ -289,7 +289,6 @@ a, .btn {
 }
 .bannerBtnCol {
 	padding-top: 15px;
-    background: #17283b;
 }
 
 .sectionSpace {
