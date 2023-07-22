@@ -13,7 +13,7 @@ font-family: 'Heebo', sans-serif; */
   --medium: 500;
   --bold: 700;
   --black: 900;
-  --lightBg: #fceed1;
+  --lightBg: #d7dde1;
 }
 html {
   scroll-behavior: smooth;
@@ -257,6 +257,10 @@ a, .btn {
 }
 /*   /nav toggle */
 
+.contactFormStyle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 /* banner section */
 .bannerSection {
