@@ -13,7 +13,7 @@ class Skill(models.Model):
         verbose_name = 'Skill'
         verbose_name_plural = 'Skills'
 
-    name = models.CharField(max_length=20, blank=True, null=True)
+    name = models.CharField(max_length=36, blank=True, null=True)
     score = models.IntegerField(default=80, blank=True, null=True)
     image = models.FileField(blank=True, null=True, upload_to="skills")
     is_key_skill = models.BooleanField(default=False)
