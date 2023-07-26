@@ -266,11 +266,15 @@ a, .btn {
     max-width: 70px;
     height: auto;
     overflow: hidden;
-        float: right;
+    float: right;
+}
+
+.blogPostImageCrop {
+    object-fit: cover;
+    max-height: 10px;
 }
 
 .image-cropper img{
-
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -519,11 +523,15 @@ body.navToggleActive {
   height: 100%;
 }
 .pImg {
-  width: 100%;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+
 }
 
 .portfolioRow .pColMain:nth-child(2n-1) .pCol {
-  margin-top: -110px;
+  margin-top: 10px;
 }
 @media (min-width:576px) {
   .swiper-pagination {
