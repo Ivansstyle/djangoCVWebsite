@@ -53,20 +53,19 @@ Start Content
       <div class="row">
         <div class="col-md-auto">
           <div class="keySkillCol">
-            <h4 class="smTitle pb-3">Key Skills</h4>
-              {% for sk in me.userprofile.skills.all %}
-              {% if sk.is_key_skill %}
+             <h4 class="smTitle pb-3">Key Skills</h4>
+            {% for sk in me.userprofile.skills.all %}
+            {% if not sk.is_key_skill %}
             <div class="keySkillCard">
-                {% if sk.image %}
+              {% if sk.image %}
               <div class="ksIconCol">
-                <img src={{ sk.image.url }} alt="...">
+                <img src="{{sk.image.url}}" alt="...">
               </div>
-                {% endif %}
-
-              <span class="ksText"> {{ sk.name }} </span>
+              {% endif %}
+              <span class="ksText">{{sk.name}}</span>
             </div>
-          {% endif %}
-          {% endfor %}
+            {% endif %}
+            {% endfor %}
           </div>
         </div>
         <div class="col-md">
