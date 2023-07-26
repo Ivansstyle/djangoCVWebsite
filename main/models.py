@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from ckeditor.fields import RichTextField
 from django_tex.core import compile_template_to_pdf
+from cloudinary.models import CloudinaryField
 import os
 
 # Create your models here.
@@ -26,11 +27,11 @@ class UserProfile(models.Model):
         verbose_name = "User Profile"
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(blank=True, null=True, upload_to="avatar")
+    avatar = CloudinaryField(blank=True, null=True,)
     title = models.CharField(max_length=200, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, blank=True)
-    cv = models.FileField(blank=True, null=True, upload_to="cv")
+    cv = CloudinaryField(blank=True, null=True,)
 
     def __str__(self):
         return f'{self.user.first_name, self.user.last_name}'
@@ -54,7 +55,7 @@ class Testimonial(models.Model):
         verbose_name = 'Testimonial'
         ordering = ["name"]
 
-    thumbnail = models.ImageField(blank=True, null=True, upload_to="testimonial")
+    thumbnail = CloudinaryField(blank=True, null=True,)
     name = models.CharField(max_length=200, blank=True, null=True)
     role = models.CharField(max_length=200, blank=True, null=True)
     quote = models.CharField(max_length=500, blank=True, null=True)
@@ -70,7 +71,7 @@ class Media(models.Model):
         verbose_name_plural = "Media Files"
         ordering = ["name"]
 
-    image = models.ImageField(blank=True, null=True, upload_to="media")
+    image = CloudinaryField(blank=True, null=True,)
     url = models.URLField(blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
     is_image = models.BooleanField(default=True)
@@ -94,7 +95,7 @@ class Portfolio(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     body = RichTextField(blank=True, null=True)
-    image = models.ImageField(blank=True, null=False, upload_to="portfolio")
+    image = CloudinaryField(blank=True, null=True,)
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
 
@@ -120,7 +121,7 @@ class Blog(models.Model):
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     body = RichTextField(blank=True, null=True)
-    image = models.ImageField(blank=True, null=False, upload_to="blog")
+    image = CloudinaryField(blank=True, null=True,)
     slug = models.SlugField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
 
