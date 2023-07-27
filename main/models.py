@@ -4,9 +4,11 @@ from django.template.defaultfilters import slugify
 from ckeditor.fields import RichTextField
 from django_tex.core import compile_template_to_pdf
 from cloudinary.models import CloudinaryField
+from django.core.files.storage import FileSystemStorage
 import os
 
 # Create your models here.
+file_storage = FileSystemStorage(location='/media/cv')
 
 class Skill(models.Model):
     class Meta:
@@ -31,7 +33,7 @@ class UserProfile(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, blank=True)
-    cv = models.FileField(blank=True, null=True, upload_to="cv")
+    cv = models.FileField(blank=True, null=True, upload_to="cv", storage=file_storage)
 
     def __str__(self):
         return f'{self.user.first_name, self.user.last_name}'
