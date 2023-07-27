@@ -280,8 +280,8 @@ a, .btn {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
@@ -327,8 +327,15 @@ a, .btn {
 	display: block;
 	padding-top: 10px;
 }
+
+.keySkillCard {
+    display: flex; /* Sets the flex container */
+    align-items: center; /* Vertically aligns items in the middle */
+    gap: 5%; /* You can adjust this value. It adds space between */
+}
+
 .keySkillCard + .keySkillCard {
-  padding-top: 25px;
+  padding-top: 10px;
 }
 .keySkillCol {
   width: 300px;
@@ -633,9 +640,12 @@ body.navToggleActive {
   .smTitle {
   	font-size: 18px;
   }
-  .keySkillCard + .keySkillCard {
-  	padding-top: 20px;
-  }
+
+
+
+  /*.keySkillCard + .keySkillCard {*/
+  /*	padding-top: 20px;*/
+  /*}*/
   .keySkillCol {
   	width: 250px;
   }
