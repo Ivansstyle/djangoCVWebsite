@@ -340,17 +340,33 @@ a, .btn {
 }
 
 .progress.progressStyle {
-	height: 8px;
-	padding: 1px;
-	background-color: var(--secondaryColor);
-	border-radius: 3px;
+    direction: rtl; /* Reverse the progress bar */
+    height: 8px;
+    padding: 1px;
+    background-color: var(--secondaryColor);
+    border-radius: 3px;
 }
+
 .progressStyle .progress-bar {
-	background-color: #fff;
-	border-radius: 3px;
+    position: relative; /* Set to relative so ::after can absolute position within it */
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden; /* Hide anything outside of progress bar */
 }
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px; /* Move it a bit to the left to achieve the desired effect */
+    width: 20px; /* Control size of the curviness */
+    height: 100%;
+    background-color: var(--secondaryColor);
+     border-radius: 0 30% 30% 0;
+}
+
 .progressCol + .progressCol {
-	padding-top: 18px;
+    padding-top: 18px;
 }
 
 .cardOptionCol > li {
