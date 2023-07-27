@@ -31,7 +31,7 @@ class UserProfile(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
     skills = models.ManyToManyField(Skill, blank=True)
-    cv = CloudinaryField(blank=True, null=True,)
+    cv = models.FileField(blank=True, null=True, upload_to="cv")
 
     def __str__(self):
         return f'{self.user.first_name, self.user.last_name}'
