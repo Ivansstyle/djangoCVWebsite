@@ -8,7 +8,7 @@ from django.core.files.storage import FileSystemStorage
 import os
 
 # Create your models here.
-file_storage = FileSystemStorage(location='/media/cv')
+file_storage = FileSystemStorage(location='media/cv')
 
 class Skill(models.Model):
     class Meta:
